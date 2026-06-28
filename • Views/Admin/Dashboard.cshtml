@@ -1,0 +1,53 @@
+@{
+    ViewBag.Title = "Admin Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid mt-4">
+  <h2>Admin Dashboard</h2>
+  <div class="row mb-4 mt-3">
+    <div class="col-md-3">
+      <div class="card text-white bg-primary shadow">
+        <div class="card-body text-center">
+          <h5>Products</h5>
+          <h2>@ViewBag.TotalProducts</h2>
+          <a href="@Url.Action("Products","Admin")" class="text-white small">Manage</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-white bg-success shadow">
+        <div class="card-body text-center">
+          <h5>Users</h5>
+          <h2>@ViewBag.TotalUsers</h2>
+          <a href="@Url.Action("Users","Admin")" class="text-white small">View All</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-white bg-warning shadow">
+        <div class="card-body text-center">
+          <h5>Orders</h5>
+          <h2>@ViewBag.TotalOrders</h2>
+          <a href="@Url.Action("Orders","Admin")" class="text-white small">View All</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-white bg-danger shadow">
+        <div class="card-body text-center">
+          <h5>Revenue</h5>
+          <h2>Rs. @ViewBag.TotalRevenue</h2>
+          <small class="text-white">Total</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card shadow" style="max-width:400px">
+    <div class="card-header">Quick Actions</div>
+    <div class="card-body">
+      <a href="@Url.Action("AddProduct","Admin")" class="btn btn-primary mb-2 w-100">Add Product</a>
+      <a href="@Url.Action("Orders","Admin")"     class="btn btn-warning mb-2 w-100">Manage Orders</a>
+      <a href="@Url.Action("Users","Admin")"      class="btn btn-success w-100">View Users</a>
+    </div>
+  </div>
+</div>
