@@ -69,4 +69,4 @@ Role-based product selling web application using C# .NET MVC and Oracle Database
 
 ## Developer
 
-Sam | B.Sc. IT | VNSGU Surat
+Srushti | B.Sc. IT | VNSGU Surat
